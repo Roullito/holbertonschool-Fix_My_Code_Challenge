@@ -35,7 +35,7 @@ class User():
         Password setter:
         - `None` if `pwd` is `None`
         - `None` if `pwd` is not a string
-        - Hash `pwd` in MD5 before assign to `__password`
+        - Hash `pwd` in MD5 before assign to `_password`
         """
         if pwd is None or type(pwd) is not str:
             self._password = None
@@ -47,8 +47,8 @@ class User():
         Valid password:
         - `False` if `pwd` is `None`
         - `False` if `pwd` is not a string
-        - `False` if `__password` is `None`
-        - Compare `__password` and the MD5 value of `pwd`
+        - `False` if `_password` is `None`
+        - Compare `_password` and the MD5 value of `pwd`
         """
         if pwd is None or type(pwd) is not str:
             return False
